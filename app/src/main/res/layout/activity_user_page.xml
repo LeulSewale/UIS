@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserPage"
+    android:padding="10dp"
+   >
+
+    <TextView
+        android:id="@+id/un"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#009688"
+        android:textStyle="bold"
+        android:text=" User Name is:"
+        android:textSize="25dp"/>
+    <TextView
+        android:id="@+id/un1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="25dp"
+        android:textColor="#F44336"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/un"/>
+    <TextView
+        android:id="@+id/pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Password is"
+        android:textColor="#009688"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_below="@+id/un"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/pass1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#2196F3"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_toEndOf="@+id/pass"
+        android:layout_below="@+id/un1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:id="@+id/et_delete_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:hint="enter password to delete"
+        android:inputType="number"
+        android:textColor="#9C27B0"
+        android:textColorHint="#3F51B5"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/see_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_delete_row"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:onClick="load"
+        android:text="See Your account"
+        android:textAllCaps="false"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/see_data"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:onClick="logout"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/delete_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logout"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="12dp"
+        android:onClick="delete"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:textSize="30dp" />
+
+
+
+    <Button
+        android:id="@+id/goto_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/delete_row"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:onClick="gotoRV"
+        android:text="Show Detail"
+        android:textAllCaps="false"
+        android:textSize="30dp" />
+</RelativeLayout>
